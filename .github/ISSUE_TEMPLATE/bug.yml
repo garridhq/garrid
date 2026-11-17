@@ -1,0 +1,34 @@
+name: Bug report
+description: Something in Garrid does not work as described.
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Garrid version
+      description: The output of `garrid version`.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: For example macOS 26 on Apple silicon, or Ubuntu 24.04 amd64.
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+  - type: markdown
+    attributes:
+      value: |
+        `garrid support --out garrid-support.zip` writes a support bundle with
+        counts and codes only. Attach it if it helps. Do not paste secrets,
+        private paths or code.
